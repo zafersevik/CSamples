@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include "ObjectImitation.h"
 
-int main(void)
+int main(int argc, const char *argv[])
 {
     ObjectImitation *object = ObjectImitationInit("Zafer");
     object->greet(object);

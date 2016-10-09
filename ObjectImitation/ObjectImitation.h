@@ -1,11 +1,11 @@
 #ifndef ObjectImitation_h
 #define ObjectImitation_h
 
-typedef struct
+typedef struct ObjectImitation
 {
+    void (*release)(struct ObjectImitation *self);
     char *name;
-    void (*greet)(void *self);
-    void (*release)(void *self);
+    void (*greet)(struct ObjectImitation *self);
 } ObjectImitation;
 
 ObjectImitation *ObjectImitationInit(char *name);
