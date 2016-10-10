@@ -5,5 +5,6 @@ int main(int argc, const char *argv[])
 {
     ObjectImitation *object = ObjectImitationInit("Zafer");
     object->greet(object);
+    object->sayGoodbye(object);
     object->release(object);
 }

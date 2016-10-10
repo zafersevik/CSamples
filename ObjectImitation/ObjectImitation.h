@@ -6,6 +6,7 @@ typedef struct ObjectImitation
     void (*release)(struct ObjectImitation *self);
     char *name;
     void (*greet)(struct ObjectImitation *self);
+    void (*sayGoodbye)(struct ObjectImitation *self);
 } ObjectImitation;
 
 ObjectImitation *ObjectImitationInit(char *name);

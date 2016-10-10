@@ -4,6 +4,7 @@
 
 static void release(ObjectImitation *self);
 static void greet(ObjectImitation *self);
+static void sayGoodbye(ObjectImitation *self);
 
 ObjectImitation* ObjectImitationInit(char* name)
 {
@@ -11,6 +12,7 @@ ObjectImitation* ObjectImitationInit(char* name)
     object->release = &release;
     object->name = name;
     object->greet = &greet;
+    object->sayGoodbye = &sayGoodbye;
     
     return object;
 }
@@ -23,4 +25,9 @@ static void release(ObjectImitation *self)
 static void greet(ObjectImitation *self)
 {
     printf("Hello %s \n", self->name);
+}
+
+static void sayGoodbye(ObjectImitation *self) 
+{
+    printf("Goodbye %s \n", self->name);
 }
