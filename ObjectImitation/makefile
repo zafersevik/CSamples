@@ -10,3 +10,8 @@ clean:
 
 removeO:
 	rm -f *.o
+
+
+// -c: compiles source files without linking
+// -Wall: enables all compiler warnings
+// -g: generates debug information
