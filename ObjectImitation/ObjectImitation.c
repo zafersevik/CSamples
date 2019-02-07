@@ -13,12 +13,13 @@ ObjectImitation* ObjectImitationInit(char* name)
     object->name = name;
     object->greet = &greet;
     object->sayGoodbye = &sayGoodbye;
-    
+
     return object;
 }
 
 static void release(ObjectImitation *self)
 {
+    printf("***Releasing memory***\nobject: %s\nsize: %lu\n***\n", self->name, sizeof(*self));
     free(self);
 }
 
